@@ -1,5 +1,6 @@
 const LivroDao = require('../infra/livro-dao');
 const db = require('../../config/database');
+const { check, validationResult } = require('express-validator/check');
 
 module.exports = (app) => {
     app.get('/', function(req, resp) {
@@ -39,10 +40,25 @@ module.exports = (app) => {
                 .catch(erro => console.log(erro));
     });
 
-    app.post('/livros', function(req, resp) {
+    app.post('/livros', [
+        check('titulo').isLength({ min: 5 }).withMessage('o titulo precisa ter no min 5 caracters'),
+        check('preco').isCurrency().withMessage("o preço precisa ter um valor monetario valido")
+        ], 
+        function(req, resp) {
         console.log(req.body);
         const livroDao = new LivroDao(db);
-        
+    
+        const erros = validationResult(req);
+    
+        if(!erros.isEmpty()) {
+            return resp.marko(
+                require('../views/livros/form/form.marko'),
+                { livro: {},
+                   errosValidacao:erros.array()
+                }
+            );
+        }
+    
         livroDao.adiciona(req.body)
                 .then(resp.redirect('/livros'))
                 .catch(erro => console.log(erro));
