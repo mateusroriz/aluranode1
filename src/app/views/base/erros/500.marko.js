@@ -19,10 +19,11 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
+  out.w("<header class=\"cabecalhoPrincipal\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><h1 class=\"logo\"><img src=\"/estatico/imagens/logo-casadocodigo.svg\" alt=\"Casa do Código\"></h1></div><div class=\"cabecalhoPrincipal-navegacao col-8\"><a href=\"#\" class=\"login\"><i class=\"fas fa-sign-in-alt\"></i>Login</a></div></div></div></header><main class=\"conteudoPrincipal\"><div class=\"container\"><h1>Opss!</h1><p>Houve um problema. Tente mais tarde.</p><a href=\"/\">Voltar</a></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div></div></div></footer>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "32");
+  await_reorderer_tag({}, out, __component, "26");
 
   out.w("</body></html>");
 }

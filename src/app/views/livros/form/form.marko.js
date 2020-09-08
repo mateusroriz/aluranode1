@@ -42,7 +42,7 @@ function render(input, out, __component, component, state) {
     out.w("</div>");
   }
 
-  out.w("<form action=\"/livros\" method=\"post\">");
+  out.w("<form action=\"/livros/form\" method=\"post\">");
 
   if (data.livro.id) {
     out.w("<div><input type=\"hidden\" name=\"_method\" value=\"PUT\"><input type=\"hidden\" name=\"id\" value=\"" +
@@ -56,10 +56,11 @@ function render(input, out, __component, component, state) {
     marko_escapeXmlAttr(data.livro.preco) +
     "\" class=\"form-control\"></div><div class=\"form-group\"><label for=\"descricao\">Descrição:</label><textarea cols=\"20\" rows=\"10\" id=\"descricao\" name=\"descricao\" placeholder=\"fale sobre o livro\" class=\"form-control\">" +
     marko_escapeXml(data.livro.descricao) +
+    "</textarea></div><input type=\"submit\" value=\"Salvar\" class=\"btn btn-primary\"></form></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div></div></div></footer>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "48");
+  await_reorderer_tag({}, out, __component, "42");
 
   out.w("</body></html>");
 }
