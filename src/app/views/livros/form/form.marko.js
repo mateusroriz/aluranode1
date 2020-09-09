@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/node1$1.0.0/src/app/views/livros/form/form.marko",
+    marko_componentType = "/casadocodigo$1.0.0/src/app/views/livros/form/form.marko",
     components_helpers = require("marko/src/components/helpers"),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
@@ -56,11 +56,11 @@ function render(input, out, __component, component, state) {
     marko_escapeXmlAttr(data.livro.preco) +
     "\" class=\"form-control\"></div><div class=\"form-group\"><label for=\"descricao\">Descrição:</label><textarea cols=\"20\" rows=\"10\" id=\"descricao\" name=\"descricao\" placeholder=\"fale sobre o livro\" class=\"form-control\">" +
     marko_escapeXml(data.livro.descricao) +
-    "</textarea></div><input type=\"submit\" value=\"Salvar\" class=\"btn btn-primary\"></form></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div></div></div></footer>");
+    "</textarea></div><input type=\"submit\" value=\"Salvar\" class=\"btn btn-primary\"></form></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div><div class=\"col-8\"></div></div></div></footer>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "42");
+  await_reorderer_tag({}, out, __component, "43");
 
   out.w("</body></html>");
 }
@@ -73,7 +73,7 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
-    id: "/node1$1.0.0/src/app/views/livros/form/form.marko",
+    id: "/casadocodigo$1.0.0/src/app/views/livros/form/form.marko",
     tags: [
       "marko/src/components/taglib/component-globals-tag",
       "marko/src/components/taglib/init-components-tag",

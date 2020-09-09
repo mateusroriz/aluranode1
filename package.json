@@ -1,17 +1,17 @@
 {
-  "name": "node1",
+  "name": "casadocodigo",
   "version": "1.0.0",
-  "description": "tutorial node alura",
+  "description": "Livraria Casa do Codigo",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js --ignore *.marko.js"
   },
-  "author": "Mateus Roriz",
+  "author": "Gabriel Leite",
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.18.3",
-    "express": "^4.16.3",
+    "express": "4.16.3",
     "express-session": "1.15.6",
     "express-validator": "5.3.1",
     "marko": "4.13.4-1",

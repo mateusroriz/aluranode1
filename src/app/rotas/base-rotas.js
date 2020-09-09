@@ -9,5 +9,4 @@ module.exports = (app) => {
     app.route(rotasBase.login)
         .get(baseControlador.login())
         .post(baseControlador.efetuaLogin());
-    
 };

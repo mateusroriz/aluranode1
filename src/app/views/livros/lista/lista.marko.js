@@ -2,7 +2,7 @@
 "use strict";
 
 var marko_template = module.exports = require("marko/src/html").t(__filename),
-    marko_componentType = "/node1$1.0.0/src/app/views/livros/lista/lista.marko",
+    marko_componentType = "/casadocodigo$1.0.0/src/app/views/livros/lista/lista.marko",
     components_helpers = require("marko/src/components/helpers"),
     marko_renderer = components_helpers.r,
     marko_defineComponent = components_helpers.c,
@@ -44,11 +44,11 @@ function render(input, out, __component, component, state) {
       "\" data-type=\"remocao\">Remover</a></td></tr>");
   });
 
-  out.w("</tbody></table></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div></div></div></footer><script src=\"/estatico/js/remove-livro.js\">\r\n        </script>");
+  out.w("</tbody></table></div></main><footer class=\"rodape\"><div class=\"container\"><div class=\"row align-items-center\"><div class=\"col-4\"><img src=\"/estatico/imagens/logo-rodape.svg\" class=\"logo-rodape\"></div><div class=\"col-8\"></div></div></div></footer><script src=\"/estatico/js/remove-livro.js\">\r\n        </script>");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "44");
+  await_reorderer_tag({}, out, __component, "45");
 
   out.w("</body></html>");
 }
@@ -61,7 +61,7 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
-    id: "/node1$1.0.0/src/app/views/livros/lista/lista.marko",
+    id: "/casadocodigo$1.0.0/src/app/views/livros/lista/lista.marko",
     tags: [
       "marko/src/components/taglib/component-globals-tag",
       "marko/src/components/taglib/init-components-tag",
